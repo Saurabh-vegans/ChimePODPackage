@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeetingSettingsViewController" customModule="VideoCallFramework">
+            <connections>
+                <outlet property="camLabel" destination="tZD-cC-35t" id="3TC-jp-Lya"/>
+                <outlet property="camPicker" destination="2aA-On-biD" id="gKu-EA-afz"/>
+                <outlet property="micLabel" destination="Szc-vr-3Ap" id="dgw-gX-Zhu"/>
+                <outlet property="micPicker" destination="cE8-0C-dYQ" id="Uzs-3E-Xxf"/>
+                <outlet property="view" destination="R0p-Ae-eUa" id="e8G-2Q-zC1"/>
+                <outlet property="wrapper" destination="tjw-0t-mYw" id="OW0-Jw-Rzc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="R0p-Ae-eUa">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjw-0t-mYw" customClass="RoundView" customModule="VideoCallFramework">
+                    <rect key="frame" x="20" y="361" width="374" height="174"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6fd-qf-aZ9">
+                            <rect key="frame" x="20" y="30" width="334" height="114"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-16-3Uw">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="52"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-hs-IpW">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="19"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                            <color key="textColor" name="TextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pcT-WC-Fz2">
+                                            <rect key="frame" x="0.0" y="29" width="334" height="23"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVd-2N-FHw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
+                                                    <subviews>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predefinito - Headphones 8Realtek (R) …" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szc-vr-3Ap">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="17"/>
+                                                            <gestureRecognizers/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                            <color key="textColor" name="TextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-9h-Ede">
+                                                            <rect key="frame" x="329" y="0.0" width="5" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="5" id="zy6-uL-ak7"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-NC-Gri">
+                                                    <rect key="frame" x="0.0" y="22" width="334" height="1"/>
+                                                    <color key="backgroundColor" name="NavBarColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="I2I-LG-M90"/>
+                                                    </constraints>
+                                                </view>
+                                                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-0C-dYQ">
+                                                    <rect key="frame" x="0.0" y="23" width="334" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="Ffb-UG-IEU"/>
+                                                    </constraints>
+                                                </pickerView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A5h-G8-dnm">
+                                    <rect key="frame" x="0.0" y="62" width="334" height="52"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewc-Bc-cPs">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="19"/>
+                                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                                            <color key="textColor" name="TextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-Ol-ZH2">
+                                            <rect key="frame" x="0.0" y="29" width="334" height="23"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eQ-vc-nf5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
+                                                    <subviews>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Integrated Webcam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZD-cC-35t">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="17"/>
+                                                            <gestureRecognizers/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                            <color key="textColor" name="TextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="DOE-Md-PaU">
+                                                            <rect key="frame" x="329" y="0.0" width="5" height="17"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="5" id="iTd-lP-hZV"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-cy-0oU">
+                                                    <rect key="frame" x="0.0" y="22" width="334" height="1"/>
+                                                    <color key="backgroundColor" name="NavBarColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="87l-1q-66p"/>
+                                                    </constraints>
+                                                </view>
+                                                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-On-biD">
+                                                    <rect key="frame" x="0.0" y="23" width="334" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="ALU-Rg-IhS"/>
+                                                    </constraints>
+                                                </pickerView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6fd-qf-aZ9" secondAttribute="bottom" constant="30" id="EWE-mX-SxG"/>
+                        <constraint firstAttribute="trailing" secondItem="6fd-qf-aZ9" secondAttribute="trailing" constant="20" id="NYZ-Yx-w41"/>
+                        <constraint firstItem="6fd-qf-aZ9" firstAttribute="leading" secondItem="tjw-0t-mYw" secondAttribute="leading" constant="20" id="WLb-QX-IDu"/>
+                        <constraint firstItem="6fd-qf-aZ9" firstAttribute="top" secondItem="tjw-0t-mYw" secondAttribute="top" constant="30" id="vFV-J9-Pi5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="zJT-Wd-sBY"/>
+            <color key="backgroundColor" name="AlertAlphaBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="tjw-0t-mYw" firstAttribute="width" secondItem="R0p-Ae-eUa" secondAttribute="width" multiplier="0.903382" id="6hm-iP-o85"/>
+                <constraint firstItem="tjw-0t-mYw" firstAttribute="centerX" secondItem="R0p-Ae-eUa" secondAttribute="centerX" id="CX5-hp-atI"/>
+                <constraint firstItem="tjw-0t-mYw" firstAttribute="centerY" secondItem="R0p-Ae-eUa" secondAttribute="centerY" id="vAh-sh-6wh"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="8" height="5"/>
+        <namedColor name="AlertAlphaBackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.19994592666625977" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavBarColor">
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.20392156862745098" green="0.23529411764705882" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

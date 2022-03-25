@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeetingVideoPreviewViewController" customModule="VideoCallFramework">
+            <connections>
+                <outlet property="camButton" destination="3pT-SP-9Im" id="zln-Qn-dFQ"/>
+                <outlet property="continueButton" destination="cGi-ii-QmC" id="NMn-LT-tXi"/>
+                <outlet property="errorMessage" destination="KrL-5P-gsP" id="4oP-a7-VFs"/>
+                <outlet property="errorTitle" destination="Kar-oB-2I0" id="RSu-lQ-cdn"/>
+                <outlet property="errorView" destination="SYj-wJ-B2a" id="pTa-ac-isc"/>
+                <outlet property="micButton" destination="6Xj-mG-3ag" id="GWF-E9-V0E"/>
+                <outlet property="previewView" destination="oH9-zR-wCT" id="DXD-gx-6KT"/>
+                <outlet property="settingsButton" destination="Ceb-Rs-bNc" id="hLC-Wu-VOr"/>
+                <outlet property="view" destination="H4C-ic-aer" id="Z1f-vK-vNS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="H4C-ic-aer">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6A-dY-LHg" customClass="RoundView" customModule="ChimePOC">
+                    <rect key="frame" x="35" y="64" width="344" height="611.5"/>
+                    <subviews>
+                        <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH9-zR-wCT" customClass="DefaultVideoRenderView" customModule="AmazonChimeSDK">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="611.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYj-wJ-B2a">
+                            <rect key="frame" x="17.5" y="238" width="309" height="135"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-oB-2I0">
+                                    <rect key="frame" x="10" y="0.0" width="289" height="28.5"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="24"/>
+                                    <color key="textColor" red="0.78823529410000004" green="0.19215686269999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are encountering some errors." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrL-5P-gsP">
+                                    <rect key="frame" x="10" y="44" width="289" height="17"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                    <color key="textColor" red="0.78823529410000004" green="0.19215686269999999" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="errorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qW0-6D-r9U">
+                                    <rect key="frame" x="134.5" y="101" width="40" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="RyZ-iS-I2a"/>
+                                        <constraint firstAttribute="height" constant="34" id="SWF-z4-Xeq"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="KrL-5P-gsP" firstAttribute="leading" secondItem="Kar-oB-2I0" secondAttribute="leading" id="4CZ-tj-e5t"/>
+                                <constraint firstItem="KrL-5P-gsP" firstAttribute="trailing" secondItem="Kar-oB-2I0" secondAttribute="trailing" id="6uQ-io-J5w"/>
+                                <constraint firstItem="KrL-5P-gsP" firstAttribute="top" secondItem="Kar-oB-2I0" secondAttribute="bottom" constant="15.5" id="DGd-KV-2k7"/>
+                                <constraint firstAttribute="trailing" secondItem="Kar-oB-2I0" secondAttribute="trailing" constant="10" id="E4g-RR-24s"/>
+                                <constraint firstItem="Kar-oB-2I0" firstAttribute="leading" secondItem="SYj-wJ-B2a" secondAttribute="leading" constant="10" id="EEg-kt-DiP"/>
+                                <constraint firstItem="qW0-6D-r9U" firstAttribute="centerX" secondItem="SYj-wJ-B2a" secondAttribute="centerX" id="LPg-JD-ibv"/>
+                                <constraint firstItem="Kar-oB-2I0" firstAttribute="top" secondItem="SYj-wJ-B2a" secondAttribute="top" id="Yve-hT-tNW"/>
+                                <constraint firstItem="qW0-6D-r9U" firstAttribute="top" secondItem="KrL-5P-gsP" secondAttribute="bottom" constant="40" id="aRd-UE-ejP"/>
+                                <constraint firstAttribute="bottom" secondItem="qW0-6D-r9U" secondAttribute="bottom" id="pC7-of-kb0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="previewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oH9-zR-wCT" secondAttribute="trailing" id="4dD-Os-Zu8"/>
+                        <constraint firstItem="oH9-zR-wCT" firstAttribute="leading" secondItem="H6A-dY-LHg" secondAttribute="leading" id="74p-8E-Y5F"/>
+                        <constraint firstAttribute="width" secondItem="H6A-dY-LHg" secondAttribute="height" multiplier="9:16" id="AfM-J7-Gvv"/>
+                        <constraint firstItem="SYj-wJ-B2a" firstAttribute="centerY" secondItem="H6A-dY-LHg" secondAttribute="centerY" id="BUr-By-jTt"/>
+                        <constraint firstItem="SYj-wJ-B2a" firstAttribute="centerX" secondItem="H6A-dY-LHg" secondAttribute="centerX" id="RE7-kX-1rA"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SYj-wJ-B2a" secondAttribute="bottom" constant="15" id="V7V-84-oua"/>
+                        <constraint firstAttribute="bottom" secondItem="oH9-zR-wCT" secondAttribute="bottom" id="ZXX-uA-2cK"/>
+                        <constraint firstItem="oH9-zR-wCT" firstAttribute="top" secondItem="H6A-dY-LHg" secondAttribute="top" id="f9X-pU-0er"/>
+                        <constraint firstItem="SYj-wJ-B2a" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H6A-dY-LHg" secondAttribute="top" constant="15" id="gt9-SM-KoL"/>
+                        <constraint firstItem="SYj-wJ-B2a" firstAttribute="width" secondItem="H6A-dY-LHg" secondAttribute="width" multiplier="0.9" id="kbK-zf-gLx"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="AfM-J7-Gvv"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="AfM-J7-Gvv"/>
+                        </mask>
+                    </variation>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="I5e-ZH-06Q">
+                    <rect key="frame" x="107" y="695.5" width="200" height="146.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GRK-RL-lAs">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="66.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xj-mG-3ag">
+                                    <rect key="frame" x="0.0" y="0.0" width="66.5" height="66.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="6Xj-mG-3ag" secondAttribute="height" id="87T-53-qUN"/>
+                                        <constraint firstAttribute="width" constant="40" id="Tad-Ex-PoX"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="mic button"/>
+                                    <state key="disabled" image="off mic button"/>
+                                    <state key="selected" image="off mic button"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Tad-Ex-PoX"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact-widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="Tad-Ex-PoX"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="micTapped:" destination="-1" eventType="touchUpInside" id="da7-Ou-3ae"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pT-SP-9Im">
+                                    <rect key="frame" x="66.5" y="0.0" width="67" height="66.5"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="cam button"/>
+                                    <state key="disabled" image="off cam button"/>
+                                    <state key="selected" image="off cam button"/>
+                                    <connections>
+                                        <action selector="camTapped:" destination="-1" eventType="touchUpInside" id="qlh-ds-aA3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-Rs-bNc">
+                                    <rect key="frame" x="133.5" y="0.0" width="66.5" height="66.5"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="settings button"/>
+                                    <connections>
+                                        <action selector="settingsTapped:" destination="-1" eventType="touchUpInside" id="IMJ-gH-P5D"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
+                            <variation key="heightClass=compact-widthClass=regular" spacing="10"/>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGi-ii-QmC" customClass="RoundButton" customModule="VideoCallFramework">
+                            <rect key="frame" x="0.0" y="106.5" width="200" height="40"/>
+                            <color key="backgroundColor" name="EnabledButtonColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="1KY-Z5-zUL"/>
+                                <constraint firstAttribute="height" constant="40" id="9HO-Cf-gxa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Join meeting">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="enabledBackgroundColor">
+                                    <color key="value" name="EnabledButtonColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                    <color key="value" name="DisabledButtonBackground"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="joinTapped:" destination="-1" eventType="touchUpInside" id="Qxb-O9-jIc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                    <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="C6L-r9-SRm"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="top" secondItem="C6L-r9-SRm" secondAttribute="top" id="53T-tE-o1D"/>
+                <constraint firstAttribute="bottom" secondItem="H6A-dY-LHg" secondAttribute="bottom" id="Mqi-uk-zLc"/>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="leading" secondItem="H4C-ic-aer" secondAttribute="leading" id="PIh-Dh-un4"/>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="top" secondItem="H4C-ic-aer" secondAttribute="top" id="TLC-8t-ysG"/>
+                <constraint firstItem="I5e-ZH-06Q" firstAttribute="centerX" secondItem="H4C-ic-aer" secondAttribute="centerX" id="VOD-bd-oua"/>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="top" secondItem="C6L-r9-SRm" secondAttribute="top" constant="20" id="W7D-fi-T6s"/>
+                <constraint firstItem="I5e-ZH-06Q" firstAttribute="top" secondItem="H6A-dY-LHg" secondAttribute="bottom" constant="20" id="YCs-Vs-cXe"/>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="bottom" secondItem="H4C-ic-aer" secondAttribute="bottom" id="aBu-IY-JAa"/>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="centerX" secondItem="H4C-ic-aer" secondAttribute="centerX" id="dOV-es-iUu"/>
+                <constraint firstItem="H6A-dY-LHg" firstAttribute="leading" secondItem="H4C-ic-aer" secondAttribute="leading" id="hI7-Cr-tc8"/>
+                <constraint firstAttribute="trailing" secondItem="H6A-dY-LHg" secondAttribute="trailing" id="qmO-jc-qfX"/>
+                <constraint firstItem="I5e-ZH-06Q" firstAttribute="centerX" secondItem="H4C-ic-aer" secondAttribute="centerX" id="sW1-OK-cGa"/>
+                <constraint firstItem="C6L-r9-SRm" firstAttribute="bottom" secondItem="I5e-ZH-06Q" secondAttribute="bottom" constant="20" id="w2b-Fr-C4d"/>
+                <constraint firstAttribute="trailing" secondItem="H6A-dY-LHg" secondAttribute="trailing" id="zZT-ix-Dal"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="53T-tE-o1D"/>
+                    <exclude reference="Mqi-uk-zLc"/>
+                    <exclude reference="PIh-Dh-un4"/>
+                    <exclude reference="TLC-8t-ysG"/>
+                    <exclude reference="W7D-fi-T6s"/>
+                    <exclude reference="aBu-IY-JAa"/>
+                    <exclude reference="hI7-Cr-tc8"/>
+                    <exclude reference="qmO-jc-qfX"/>
+                    <exclude reference="zZT-ix-Dal"/>
+                    <exclude reference="YCs-Vs-cXe"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="53T-tE-o1D"/>
+                    <include reference="Mqi-uk-zLc"/>
+                    <include reference="TLC-8t-ysG"/>
+                    <include reference="hI7-Cr-tc8"/>
+                    <include reference="zZT-ix-Dal"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="PIh-Dh-un4"/>
+                    <include reference="TLC-8t-ysG"/>
+                    <exclude reference="W7D-fi-T6s"/>
+                    <include reference="aBu-IY-JAa"/>
+                    <include reference="qmO-jc-qfX"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="W7D-fi-T6s"/>
+                    <include reference="YCs-Vs-cXe"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-58" y="143"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="cGi-ii-QmC">
+            <size key="intrinsicContentSize" width="86" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="cam button" width="50" height="50"/>
+        <image name="errorIcon" width="40" height="34"/>
+        <image name="mic button" width="50" height="50"/>
+        <image name="off cam button" width="50" height="50"/>
+        <image name="off mic button" width="50" height="50"/>
+        <image name="settings button" width="50" height="50"/>
+        <namedColor name="DisabledButtonBackground">
+            <color red="0.20392156862745098" green="0.23529411764705882" blue="0.44313725490196076" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EnabledButtonColor">
+            <color red="0.20392156862745098" green="0.23529411764705882" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="previewBackgroundColor">
+            <color red="0.91764705882352937" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
