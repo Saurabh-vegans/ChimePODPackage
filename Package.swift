@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "ChimePODPackage",
             dependencies: [
-                .product(name: "AmazonChimeSDK", package: "amazon-chime-sdk-ios")
+//                .product(name: "AmazonChimeSDK", package: "amazon-chime-sdk-ios")
             ],
             resources: [.process("Resources")]
         ),
